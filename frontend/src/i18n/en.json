@@ -1,0 +1,57 @@
+{
+  "appTitle": "Global Consular Collaboration Platform",
+  "welcomeMessage": "Welcome, {{name}}",
+  "login": "Login",
+  "logout": "Logout",
+  "email": "Email",
+  "password": "Password",
+  "register": "Register",
+  "submitRequest": "Submit New Request",
+  "caseStatus": "Case Status",
+  "myCases": "My Cases",
+  "dashboard": "Dashboard",
+  "lostPassport": "Lost Passport",
+  "visaIssue": "Visa Issue",
+  "emergency": "Emergency",
+  "documentAttestation": "Document Attestation",
+  "uploadDocuments": "Upload Supporting Documents",
+  "next": "Next",
+  "previous": "Previous",
+  "submit": "Submit",
+  "cancel": "Cancel",
+  "description": "Description",
+  "urgency": "Urgency",
+  "low": "Low",
+  "normal": "Normal",
+  "high": "High",
+  "critical": "Critical",
+  "status": {
+    "submitted": "Submitted",
+    "inProgress": "In Progress",
+    "resolved": "Resolved"
+  },
+  "caseType": {
+    "lost_passport": "Lost Passport",
+    "visa_issue": "Visa Issue",
+    "emergency": "Emergency",
+    "document_attestation": "Document Attestation"
+  },
+  "form": {
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "nationality": "Nationality",
+    "passportNumber": "Passport Number",
+    "selectCaseType": "Select Issue Type",
+    "describeIssue": "Describe your issue",
+    "lastKnownLocation": "Last Known Location",
+    "visaType": "Visa Type"
+  },
+  "messages": {
+    "loginSuccess": "Login successful",
+    "loginFailed": "Login failed. Please check your credentials.",
+    "caseSubmitted": "Your case has been submitted successfully",
+    "loading": "Loading...",
+    "offline": "You are offline. Your data will be synced when connection is restored.",
+    "noData": "No data available"
+  }
+}

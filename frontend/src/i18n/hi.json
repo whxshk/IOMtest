@@ -1,0 +1,57 @@
+{
+  "appTitle": "वैश्विक कौंसुलर सहयोग मंच",
+  "welcomeMessage": "स्वागत है, {{name}}",
+  "login": "लॉग इन करें",
+  "logout": "लॉग आउट",
+  "email": "ईमेल",
+  "password": "पासवर्ड",
+  "register": "पंजीकरण करें",
+  "submitRequest": "नया अनुरोध जमा करें",
+  "caseStatus": "मामले की स्थिति",
+  "myCases": "मेरे मामले",
+  "dashboard": "डैशबोर्ड",
+  "lostPassport": "खोया हुआ पासपोर्ट",
+  "visaIssue": "वीजा समस्या",
+  "emergency": "आपातकाल",
+  "documentAttestation": "दस्तावेज़ प्रमाणीकरण",
+  "uploadDocuments": "सहायक दस्तावेज़ अपलोड करें",
+  "next": "अगला",
+  "previous": "पिछला",
+  "submit": "जमा करें",
+  "cancel": "रद्द करें",
+  "description": "विवरण",
+  "urgency": "तात्कालिकता",
+  "low": "कम",
+  "normal": "सामान्य",
+  "high": "उच्च",
+  "critical": "महत्वपूर्ण",
+  "status": {
+    "submitted": "जमा किया गया",
+    "inProgress": "प्रगति में",
+    "resolved": "हल किया गया"
+  },
+  "caseType": {
+    "lost_passport": "खोया हुआ पासपोर्ट",
+    "visa_issue": "वीजा समस्या",
+    "emergency": "आपातकाल",
+    "document_attestation": "दस्तावेज़ प्रमाणीकरण"
+  },
+  "form": {
+    "name": "पूरा नाम",
+    "phone": "फोन नंबर",
+    "nationality": "राष्ट्रीयता",
+    "passportNumber": "पासपोर्ट नंबर",
+    "selectCaseType": "समस्या का प्रकार चुनें",
+    "describeIssue": "अपनी समस्या का वर्णन करें",
+    "lastKnownLocation": "अंतिम ज्ञात स्थान",
+    "visaType": "वीजा प्रकार"
+  },
+  "messages": {
+    "loginSuccess": "लॉगिन सफल",
+    "loginFailed": "लॉगिन विफल। कृपया अपने क्रेडेंशियल जांचें।",
+    "caseSubmitted": "आपका मामला सफलतापूर्वक जमा किया गया है",
+    "loading": "लोड हो रहा है...",
+    "offline": "आप ऑफ़लाइन हैं। कनेक्शन बहाल होने पर आपका डेटा सिंक हो जाएगा।",
+    "noData": "कोई डेटा उपलब्ध नहीं"
+  }
+}
