@@ -29,11 +29,11 @@ npm start
 
 ## Login Credentials
 
-**Admin:** `admin@consular-platform.org` / `Password123!`
+**Admin:** `admin@consular-platform.org` / `Admin123`
 
-**Staff:** `john.smith@usembassy.gov` / `Password123!`
+**Staff:** `john.smith@usembassy.gov` / `Admin123`
 
-**Citizen:** `michael.j@example.com` / `Password123!`
+**Citizen:** `michael.j@example.com` / `Admin123`
 
 ---
 
