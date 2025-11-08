@@ -20,29 +20,29 @@ INSERT INTO embassies (id, country, name, region, contact_email, contact_phone, 
 -- =============================================================================
 -- USERS
 -- =============================================================================
--- Password for all test users: Password123!
--- Hash generated with bcrypt (rounds=10)
+-- Password for all test users: Admin123
+-- Hash generated with bcrypt (rounds=10): $2b$10$EmnkLu/Jet5SKxh9QhU17Ois5mHhqUeXKwfFFXwKDUgSwlX.GpF1u
 
 -- Admin user
 INSERT INTO users (id, role, name, email, password_hash, preferred_language, is_active) VALUES
-('a0000001-0000-0000-0000-000000000001', 'admin', 'System Administrator', 'admin@consular-platform.org', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', true);
+('a0000001-0000-0000-0000-000000000001', 'admin', 'System Administrator', 'admin@consular-platform.org', '$2b$10$EmnkLu/Jet5SKxh9QhU17Ois5mHhqUeXKwfFFXwKDUgSwlX.GpF1u', 'en', true);
 
 -- Embassy Staff Users
 INSERT INTO users (id, embassy_id, role, name, email, password_hash, preferred_language, nationality) VALUES
 -- US Embassy staff
-('b0000001-0000-0000-0000-000000000001', '11111111-1111-1111-1111-111111111111', 'staff', 'John Smith', 'john.smith@usembassy.gov', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'United States'),
+('b0000001-0000-0000-0000-000000000001', '11111111-1111-1111-1111-111111111111', 'staff', 'John Smith', 'john.smith@usembassy.gov', '$2b$10$EmnkLu/Jet5SKxh9QhU17Ois5mHhqUeXKwfFFXwKDUgSwlX.GpF1u', 'en', 'United States'),
 -- British Embassy staff
-('b0000002-0000-0000-0000-000000000002', '22222222-2222-2222-2222-222222222222', 'staff', 'Emma Williams', 'emma.williams@fco.gov.uk', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'United Kingdom'),
+('b0000002-0000-0000-0000-000000000002', '22222222-2222-2222-2222-222222222222', 'staff', 'Emma Williams', 'emma.williams@fco.gov.uk', '$2b$10$EmnkLu/Jet5SKxh9QhU17Ois5mHhqUeXKwfFFXwKDUgSwlX.GpF1u', 'en', 'United Kingdom'),
 -- Indian Embassy staff
-('b0000003-0000-0000-0000-000000000003', '33333333-3333-3333-3333-333333333333', 'staff', 'Rajesh Kumar', 'rajesh.kumar@indembassy.gov.in', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'India'),
+('b0000003-0000-0000-0000-000000000003', '33333333-3333-3333-3333-333333333333', 'staff', 'Rajesh Kumar', 'rajesh.kumar@indembassy.gov.in', '$2b$10$EmnkLu/Jet5SKxh9QhU17Ois5mHhqUeXKwfFFXwKDUgSwlX.GpF1u', 'en', 'India'),
 -- Kenyan Embassy staff
-('b0000004-0000-0000-0000-000000000004', '44444444-4444-4444-4444-444444444444', 'staff', 'Sarah Wanjiku', 'sarah.wanjiku@kenyarep.gov', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'Kenya');
+('b0000004-0000-0000-0000-000000000004', '44444444-4444-4444-4444-444444444444', 'staff', 'Sarah Wanjiku', 'sarah.wanjiku@kenyarep.gov', '$2b$10$EmnkLu/Jet5SKxh9QhU17Ois5mHhqUeXKwfFFXwKDUgSwlX.GpF1u', 'en', 'Kenya');
 
 -- Test Citizen Users
 INSERT INTO users (id, role, name, email, phone, password_hash, preferred_language, nationality, passport_number) VALUES
-('c0000001-0000-0000-0000-000000000001', 'citizen', 'Michael Johnson', 'michael.j@example.com', '+81-90-1234-5678', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'United States', 'US123456789'),
-('c0000002-0000-0000-0000-000000000002', 'citizen', 'Priya Sharma', 'priya.sharma@example.com', '+81-90-2345-6789', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'hi', 'India', 'IN987654321'),
-('c0000003-0000-0000-0000-000000000003', 'citizen', 'James Wilson', 'james.w@example.com', '+81-90-3456-7890', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'United Kingdom', 'UK456789123');
+('c0000001-0000-0000-0000-000000000001', 'citizen', 'Michael Johnson', 'michael.j@example.com', '+81-90-1234-5678', '$2b$10$EmnkLu/Jet5SKxh9QhU17Ois5mHhqUeXKwfFFXwKDUgSwlX.GpF1u', 'en', 'United States', 'US123456789'),
+('c0000002-0000-0000-0000-000000000002', 'citizen', 'Priya Sharma', 'priya.sharma@example.com', '+81-90-2345-6789', '$2b$10$EmnkLu/Jet5SKxh9QhU17Ois5mHhqUeXKwfFFXwKDUgSwlX.GpF1u', 'hi', 'India', 'IN987654321'),
+('c0000003-0000-0000-0000-000000000003', 'citizen', 'James Wilson', 'james.w@example.com', '+81-90-3456-7890', '$2b$10$EmnkLu/Jet5SKxh9QhU17Ois5mHhqUeXKwfFFXwKDUgSwlX.GpF1u', 'en', 'United Kingdom', 'UK456789123');
 
 -- =============================================================================
 -- SAMPLE CASES
@@ -108,6 +108,6 @@ BEGIN
     RAISE NOTICE '========================================';
     RAISE NOTICE 'Default credentials for testing:';
     RAISE NOTICE 'Admin: admin@consular-platform.org';
-    RAISE NOTICE 'Password: Password123!';
+    RAISE NOTICE 'Password: Admin123';
     RAISE NOTICE '========================================';
 END $$;
