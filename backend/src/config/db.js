@@ -62,18 +62,36 @@ async function query(text, params, user = null) {
 }
 
 /**
- * Test database connection
+ * Test database connection with retry logic
  */
-async function connectDB() {
-  try {
-    const client = await pool.connect();
-    const result = await client.query('SELECT NOW()');
-    console.log('✓ Database connected successfully at:', result.rows[0].now);
-    client.release();
-    return true;
-  } catch (error) {
-    console.error('✗ Database connection error:', error.message);
-    throw error;
+async function connectDB(retries = 3, delay = 2000) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const client = await pool.connect();
+      const result = await client.query('SELECT NOW()');
+      console.log('✓ Database connected successfully at:', result.rows[0].now);
+      client.release();
+      return true;
+    } catch (error) {
+      console.error(`✗ Database connection attempt ${i + 1}/${retries} failed:`, error.message);
+
+      if (error.code === 'ECONNREFUSED') {
+        console.error('');
+        console.error('💡 PostgreSQL is not running. Start it with:');
+        console.error('   /etc/init.d/postgresql start');
+        console.error('');
+      }
+
+      if (i < retries - 1) {
+        console.log(`⏳ Retrying in ${delay / 1000} seconds...`);
+        await new Promise(resolve => setTimeout(resolve, delay));
+      } else {
+        console.error('');
+        console.error('❌ Failed to connect to database after', retries, 'attempts');
+        console.error('');
+        throw error;
+      }
+    }
   }
 }
 
