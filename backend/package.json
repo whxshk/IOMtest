@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "predev": "/etc/init.d/postgresql start || true",
     "dev": "nodemon src/index.js",
+    "serve": "./start.sh",
     "test": "jest"
   },
   "keywords": ["consular", "embassy", "collaboration"],
