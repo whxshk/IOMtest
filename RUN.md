@@ -1,27 +1,37 @@
 # 🚀 Quick Start Guide
 
-## Simple Way to Run (Recommended)
+## SINGLE PORT SETUP (Recommended for Codespaces)
 
-### Option 1: Run Backend (Easier)
+Everything runs on **PORT 5000** - both frontend and backend!
+
+### Quick Start (One Command):
 ```bash
-./start-backend.sh
+./build-and-run.sh
 ```
 
-### Option 2: Manual Steps
+This will:
+1. Start PostgreSQL
+2. Build the React frontend
+3. Start backend (which serves the frontend)
+4. Open **http://localhost:5000** to access everything
+
+---
+
+## Alternative: Two-Port Setup (Development)
 
 **Terminal 1 - Start Backend:**
 ```bash
 # Ensure PostgreSQL is running
-/etc/init.d/postgresql start
+service postgresql start
 
 # Start backend
-cd /workspaces/IOMtest/backend
-npm run dev
+cd backend
+npm start
 ```
 
 **Terminal 2 - Start Frontend:**
 ```bash
-cd /workspaces/IOMtest/frontend
+cd frontend
 npm start
 ```
 
@@ -67,6 +77,12 @@ lsof -ti:3000 | xargs kill -9
 
 ## URLs
 
+### Single Port Setup:
+- Everything: http://localhost:5000
+- API Health: http://localhost:5000/health
+- API Docs: http://localhost:5000/api/v1
+
+### Two Port Setup:
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:5000
 - API Health Check: http://localhost:5000/health

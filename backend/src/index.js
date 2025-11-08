@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
+const path = require('path');
 const { connectDB } = require('./config/db');
 
 // Route imports
@@ -126,11 +127,50 @@ app.post('/api/v1/ai/staff-assist', requireStaff, async (req, res) => {
 });
 
 // =============================================================================
+// SERVE FRONTEND (Single Port Setup)
+// =============================================================================
+
+// Serve static files from React build (if exists)
+const frontendBuildPath = path.join(__dirname, '../../frontend/build');
+app.use(express.static(frontendBuildPath));
+
+// Catch-all route - serve React app for any non-API routes
+app.get('*', (req, res, next) => {
+  // Only serve index.html for non-API routes
+  if (req.path.startsWith('/api/')) {
+    return next();
+  }
+
+  const indexPath = path.join(frontendBuildPath, 'index.html');
+  const fs = require('fs');
+
+  if (fs.existsSync(indexPath)) {
+    res.sendFile(indexPath);
+  } else {
+    // Frontend not built yet, show helpful message
+    res.status(200).send(`
+      <html>
+        <head><title>Consular Platform</title></head>
+        <body style="font-family: Arial; padding: 50px; text-align: center;">
+          <h1>🏛️ Global Consular Collaboration Platform</h1>
+          <h2>Backend API is Running ✅</h2>
+          <p>Backend API: <a href="/health">Health Check</a></p>
+          <hr/>
+          <p><strong>Frontend not built yet.</strong></p>
+          <p>Run: <code>cd frontend && npm run build</code></p>
+          <p>Then restart the backend.</p>
+        </body>
+      </html>
+    `);
+  }
+});
+
+// =============================================================================
 // ERROR HANDLING
 // =============================================================================
 
-// 404 handler
-app.use((req, res) => {
+// API 404 handler (only for API routes)
+app.use('/api/*', (req, res) => {
   res.status(404).json({
     error: 'Not Found',
     path: req.path,

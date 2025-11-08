@@ -1,10 +1,12 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+// For single-port setup, use empty string (same origin)
+// For two-port setup, use explicit URL
+const API_URL = process.env.REACT_APP_API_URL || '';
 
 // Create axios instance
 const api = axios.create({
-  baseURL: `${API_URL}/api/v1`,
+  baseURL: API_URL ? `${API_URL}/api/v1` : '/api/v1',
   headers: {
     'Content-Type': 'application/json'
   }
@@ -40,7 +42,8 @@ api.interceptors.response.use(
       try {
         const refreshToken = localStorage.getItem('refreshToken');
         if (refreshToken) {
-          const response = await axios.post(`${API_URL}/api/v1/auth/refresh`, {
+          const refreshURL = API_URL ? `${API_URL}/api/v1/auth/refresh` : '/api/v1/auth/refresh';
+          const response = await axios.post(refreshURL, {
             refreshToken
           });
 
