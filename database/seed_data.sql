@@ -25,41 +25,41 @@ INSERT INTO embassies (id, country, name, region, contact_email, contact_phone, 
 
 -- Admin user
 INSERT INTO users (id, role, name, email, password_hash, preferred_language, is_active) VALUES
-('admin001-0000-0000-0000-000000000001', 'admin', 'System Administrator', 'admin@consular-platform.org', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', true);
+('a0000001-0000-0000-0000-000000000001', 'admin', 'System Administrator', 'admin@consular-platform.org', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', true);
 
 -- Embassy Staff Users
 INSERT INTO users (id, embassy_id, role, name, email, password_hash, preferred_language, nationality) VALUES
 -- US Embassy staff
-('staff001-0000-0000-0000-000000000001', '11111111-1111-1111-1111-111111111111', 'staff', 'John Smith', 'john.smith@usembassy.gov', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'United States'),
+('b0000001-0000-0000-0000-000000000001', '11111111-1111-1111-1111-111111111111', 'staff', 'John Smith', 'john.smith@usembassy.gov', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'United States'),
 -- British Embassy staff
-('staff002-0000-0000-0000-000000000002', '22222222-2222-2222-2222-222222222222', 'staff', 'Emma Williams', 'emma.williams@fco.gov.uk', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'United Kingdom'),
+('b0000002-0000-0000-0000-000000000002', '22222222-2222-2222-2222-222222222222', 'staff', 'Emma Williams', 'emma.williams@fco.gov.uk', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'United Kingdom'),
 -- Indian Embassy staff
-('staff003-0000-0000-0000-000000000003', '33333333-3333-3333-3333-333333333333', 'staff', 'Rajesh Kumar', 'rajesh.kumar@indembassy.gov.in', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'India'),
+('b0000003-0000-0000-0000-000000000003', '33333333-3333-3333-3333-333333333333', 'staff', 'Rajesh Kumar', 'rajesh.kumar@indembassy.gov.in', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'India'),
 -- Kenyan Embassy staff
-('staff004-0000-0000-0000-000000000004', '44444444-4444-4444-4444-444444444444', 'staff', 'Sarah Wanjiku', 'sarah.wanjiku@kenyarep.gov', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'Kenya');
+('b0000004-0000-0000-0000-000000000004', '44444444-4444-4444-4444-444444444444', 'staff', 'Sarah Wanjiku', 'sarah.wanjiku@kenyarep.gov', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'Kenya');
 
 -- Test Citizen Users
 INSERT INTO users (id, role, name, email, phone, password_hash, preferred_language, nationality, passport_number) VALUES
-('citizen01-0000-0000-0000-000000000001', 'citizen', 'Michael Johnson', 'michael.j@example.com', '+81-90-1234-5678', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'United States', 'US123456789'),
-('citizen02-0000-0000-0000-000000000002', 'citizen', 'Priya Sharma', 'priya.sharma@example.com', '+81-90-2345-6789', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'hi', 'India', 'IN987654321'),
-('citizen03-0000-0000-0000-000000000003', 'citizen', 'James Wilson', 'james.w@example.com', '+81-90-3456-7890', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'United Kingdom', 'UK456789123');
+('c0000001-0000-0000-0000-000000000001', 'citizen', 'Michael Johnson', 'michael.j@example.com', '+81-90-1234-5678', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'United States', 'US123456789'),
+('c0000002-0000-0000-0000-000000000002', 'citizen', 'Priya Sharma', 'priya.sharma@example.com', '+81-90-2345-6789', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'hi', 'India', 'IN987654321'),
+('c0000003-0000-0000-0000-000000000003', 'citizen', 'James Wilson', 'james.w@example.com', '+81-90-3456-7890', '$2b$10$rKJ5YxJ8xDqYvHJLqTJNPOLZJ5qGw8QlTHe5qGYqKPgGqGqGqGqGq', 'en', 'United Kingdom', 'UK456789123');
 
 -- =============================================================================
 -- SAMPLE CASES
 -- =============================================================================
 
 INSERT INTO cases (id, user_id, primary_embassy_id, case_type, description, status, urgency, created_at) VALUES
-('case0001-0000-0000-0000-000000000001', 'citizen01-0000-0000-0000-000000000001', '11111111-1111-1111-1111-111111111111', 'lost_passport', 'I lost my passport during a trip to Osaka. Last seen at Osaka Castle on Nov 1st. Need emergency travel document to return home.', 'In Progress', 'High', NOW() - INTERVAL '2 days'),
-('case0002-0000-0000-0000-000000000002', 'citizen02-0000-0000-0000-000000000002', '33333333-3333-3333-3333-333333333333', 'visa_issue', 'My work visa is expiring in 10 days and renewal application is pending. Need status update and assistance.', 'Submitted', 'Normal', NOW() - INTERVAL '1 day'),
-('case0003-0000-0000-0000-000000000003', 'citizen03-0000-0000-0000-000000000003', '22222222-2222-2222-2222-222222222222', 'emergency', 'Medical emergency - hospitalized in Tokyo. Need assistance with medical documentation and insurance claim.', 'In Progress', 'Critical', NOW() - INTERVAL '3 hours');
+('d0000001-0000-0000-0000-000000000001', 'c0000001-0000-0000-0000-000000000001', '11111111-1111-1111-1111-111111111111', 'lost_passport', 'I lost my passport during a trip to Osaka. Last seen at Osaka Castle on Nov 1st. Need emergency travel document to return home.', 'In Progress', 'High', NOW() - INTERVAL '2 days'),
+('d0000002-0000-0000-0000-000000000002', 'c0000002-0000-0000-0000-000000000002', '33333333-3333-3333-3333-333333333333', 'visa_issue', 'My work visa is expiring in 10 days and renewal application is pending. Need status update and assistance.', 'Submitted', 'Normal', NOW() - INTERVAL '1 day'),
+('d0000003-0000-0000-0000-000000000003', 'c0000003-0000-0000-0000-000000000003', '22222222-2222-2222-2222-222222222222', 'emergency', 'Medical emergency - hospitalized in Tokyo. Need assistance with medical documentation and insurance claim.', 'In Progress', 'Critical', NOW() - INTERVAL '3 hours');
 
 -- =============================================================================
 -- CASE UPDATES
 -- =============================================================================
 
 INSERT INTO case_updates (case_id, author_id, message, status_change, is_public, created_at) VALUES
-('case0001-0000-0000-0000-000000000001', 'staff001-0000-0000-0000-000000000001', 'Case received. Police report has been filed. Emergency travel document will be ready for pickup in 48 hours.', 'Submitted -> In Progress', true, NOW() - INTERVAL '1 day'),
-('case0003-0000-0000-0000-000000000003', 'staff002-0000-0000-0000-000000000002', 'Contacted hospital. Medical records being prepared. Insurance company has been notified.', 'Submitted -> In Progress', true, NOW() - INTERVAL '2 hours');
+('d0000001-0000-0000-0000-000000000001', 'b0000001-0000-0000-0000-000000000001', 'Case received. Police report has been filed. Emergency travel document will be ready for pickup in 48 hours.', 'Submitted -> In Progress', true, NOW() - INTERVAL '1 day'),
+('d0000003-0000-0000-0000-000000000003', 'b0000002-0000-0000-0000-000000000002', 'Contacted hospital. Medical records being prepared. Insurance company has been notified.', 'Submitted -> In Progress', true, NOW() - INTERVAL '2 hours');
 
 -- =============================================================================
 -- RESOURCES
@@ -77,7 +77,7 @@ INSERT INTO resources (embassy_id, type, name, contact_info, country, city, note
 -- =============================================================================
 
 INSERT INTO audit_logs (user_id, action, entity_type, details, prev_hash) VALUES
-('admin001-0000-0000-0000-000000000001', 'SYSTEM_INITIALIZED', 'SYSTEM', '{"message": "Database initialized with seed data", "version": "1.0.0"}', 'GENESIS');
+('a0000001-0000-0000-0000-000000000001', 'SYSTEM_INITIALIZED', 'SYSTEM', '{"message": "Database initialized with seed data", "version": "1.0.0"}', 'GENESIS');
 
 -- =============================================================================
 -- VERIFICATION
