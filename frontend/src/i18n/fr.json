@@ -1,0 +1,57 @@
+{
+  "appTitle": "Plateforme Mondiale de Collaboration Consulaire",
+  "welcomeMessage": "Bienvenue, {{name}}",
+  "login": "Connexion",
+  "logout": "Déconnexion",
+  "email": "E-mail",
+  "password": "Mot de passe",
+  "register": "S'inscrire",
+  "submitRequest": "Soumettre une nouvelle demande",
+  "caseStatus": "Statut du dossier",
+  "myCases": "Mes dossiers",
+  "dashboard": "Tableau de bord",
+  "lostPassport": "Passeport perdu",
+  "visaIssue": "Problème de visa",
+  "emergency": "Urgence",
+  "documentAttestation": "Attestation de document",
+  "uploadDocuments": "Télécharger des documents justificatifs",
+  "next": "Suivant",
+  "previous": "Précédent",
+  "submit": "Soumettre",
+  "cancel": "Annuler",
+  "description": "Description",
+  "urgency": "Urgence",
+  "low": "Faible",
+  "normal": "Normal",
+  "high": "Élevé",
+  "critical": "Critique",
+  "status": {
+    "submitted": "Soumis",
+    "inProgress": "En cours",
+    "resolved": "Résolu"
+  },
+  "caseType": {
+    "lost_passport": "Passeport perdu",
+    "visa_issue": "Problème de visa",
+    "emergency": "Urgence",
+    "document_attestation": "Attestation de document"
+  },
+  "form": {
+    "name": "Nom complet",
+    "phone": "Numéro de téléphone",
+    "nationality": "Nationalité",
+    "passportNumber": "Numéro de passeport",
+    "selectCaseType": "Sélectionnez le type de problème",
+    "describeIssue": "Décrivez votre problème",
+    "lastKnownLocation": "Dernier emplacement connu",
+    "visaType": "Type de visa"
+  },
+  "messages": {
+    "loginSuccess": "Connexion réussie",
+    "loginFailed": "Échec de la connexion. Vérifiez vos identifiants.",
+    "caseSubmitted": "Votre dossier a été soumis avec succès",
+    "loading": "Chargement...",
+    "offline": "Vous êtes hors ligne. Vos données seront synchronisées lors de la restauration de la connexion.",
+    "noData": "Aucune donnée disponible"
+  }
+}
