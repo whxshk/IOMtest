@@ -6,7 +6,7 @@ echo ""
 # Start PostgreSQL if not running
 if ! pg_isready > /dev/null 2>&1; then
     echo "📦 Starting PostgreSQL..."
-    /etc/init.d/postgresql start
+    sudo service postgresql start
     sleep 2
     echo ""
 fi
